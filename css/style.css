@@ -83,6 +83,10 @@ h2 {
   font-size: 2em;
 }
 
+h1, main > section > h2 {
+  text-shadow: 2px 2px 2px black;
+}
+
 
 .htag {
   color: var(--color-main);
@@ -430,9 +434,9 @@ footer {
     margin-bottom: 0;
   }
 
-  h1, main > section > h2 {
+  /* h1, main > section > h2 {
     text-shadow: 2px 2px 2px black;
-  }
+  } */
 
   h1, h2, .htag {
     text-align: center;
