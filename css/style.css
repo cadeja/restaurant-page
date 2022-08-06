@@ -1,0 +1,448 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+@font-face {
+  font-family: "YesevaOne";
+  src: url(../assets/Yeseva_One/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Regular.ttf");
+}
+
+:root {
+  /* COLORS */
+  --color-light: rgb(246, 243, 245);         /* cultured */
+  --color-lightaccent: #8F8577;   /* middle grey */
+  --color-main: #A3B184;          /* olivine */
+  --color-darkaccent: #5f483c;    /* pastel brown */
+  /* --color-dark: rgb(93, 82, 75);          umber */
+  --color-dark: #1f1b19;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Roboto";
+  line-height: 1.6;
+
+
+  background: url("../assets/pictures/chad-montano-MqT0asuoIcU-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  
+  color: var(--color-dark);
+}
+
+/******************************************
+/* FONT STUFF AND COLORS
+/*******************************************/
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: color .2s;
+}
+
+h1,h2, h3 {
+  font-family: "YesevaOne";
+}
+
+h1 {
+  font-size: 4em;
+  color: var(--color-main);
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+
+.htag {
+  color: var(--color-main);
+  border-bottom: 2px solid var(--color-main);
+  font-weight: bold;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: rgba(31, 27, 25, 0.8);
+}
+
+header a {
+  color: var(--color-light);
+}
+
+header a:hover {
+  color: var(--color-main);
+}
+
+/* MAIN */
+
+main h2 {
+  color: var(--color-lightaccent);
+  margin-bottom: -30px;
+}
+
+main svg {
+  fill: var(--color-light);
+}
+
+.about-us > section {
+  background-color: rgba(31, 27, 25, 0.8);
+  color: var(--color-light);
+  border-radius: 10px;
+}
+
+/* OTHER SECTIONS */
+
+body > section {
+  background-color: var(--color-light);
+}
+
+.dish {
+  border: 3px solid var(--color-main);
+  border-radius: 12px;
+}
+
+.break, footer{
+  background-color: rgba(31, 27, 25, 0.8);
+}
+
+
+
+
+.hours {
+  background: url("../assets/pictures/mgg-vitchakorn-98Xi5vMGKck-unsplash.jpg");
+  background-size: cover;
+  color: var(--color-light)
+}
+
+.hours svg {
+  padding: 5px;
+  fill: var(--color-main);
+  border: 3px solid var(--color-main);
+  border-radius: 9999px;
+}
+
+.call {
+  color: var(--color-main);
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.phone-number {
+  color: var(--color-light);
+  font-size: 1.5em;
+  margin-left: 40px;
+}
+
+.hours > section > div {
+  color: var(--color-lightaccent);
+  margin-top: 60px;
+}
+
+.hours h4 {
+  font-weight: bold;
+  color: var(--color-light);
+}
+
+.hours h4 + div {
+  margin-left: 60px;
+}
+
+.profilepic img {
+  height: 200px;
+  width: 200px;
+  border: 3px solid var(--color-main);
+  border-radius: 9999px;
+}
+
+.review h4 {
+  font-size: 2em;
+}
+
+.review span {
+  color: var(--color-lightaccent);
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 3px solid var(--color-main);
+  padding-left: 20px;
+  margin: 20px 20px;
+  text-align: center;
+}
+
+.review svg {
+  fill: var(--color-main);
+  width: 50px;
+}
+
+.specialties h2 {
+  margin-bottom: 50px;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/* FLEX */
+
+body > section,
+body > section > section,
+header,
+header ul,
+.social-media,
+.about-us,
+.about-us > section,
+.specialties nav > ul,
+.dishes,
+.hours-info,
+.call,
+.review,
+footer{
+  display: flex;
+}
+
+.about-us > section,
+body > section > section,
+.review,
+footer{
+  flex-direction: column;
+}
+
+
+body > section,
+.specialties nav > ul,
+.dishes,
+.review{
+  justify-content: center;
+}
+
+.call,
+.review {
+  align-items: center;
+}
+
+.hours,
+.hours > section{
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.social-media,
+.hours-info {
+  justify-content: space-between;
+}
+
+header,
+header ul,
+body > section > section{
+  align-items: center;
+}
+
+
+header svg{
+  display: none;
+}
+
+
+.break {
+  height: 150px;
+}
+
+body > section {
+  padding: 50px 0;
+}
+
+.htag {
+  margin-bottom: 10px;
+  width: max-content;
+}
+
+main svg {
+  width: 30px;
+}
+
+.about-us h2 {
+  margin-bottom: 15px;
+}
+
+header {
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  
+  justify-content: flex-end;
+}
+
+header nav {
+  width: max(50%, 600px);
+}
+
+header ul {
+  justify-content: space-around;
+}
+
+main {
+  height: max(100vh, 1000px);
+  padding: 100px;
+  padding-bottom: 70px;
+}
+
+.social-media {
+  width: 200px;
+}
+
+.about-us {
+
+  justify-content: flex-end;
+}
+
+.about-us > section {
+  width: min(800px, 90%);
+  padding: 30px;
+}
+
+.about-us p {
+  margin: 20px 0;
+}
+
+.about-us > div {
+  width: 200px;
+}
+
+.dishes {
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.dish {
+  width: 200px;
+  height: 250px;
+  margin: 5px;
+}
+
+.hours svg {
+  width: 50px;
+}
+
+.hours > section{
+  width: 100%;
+  padding: 100px 10%;
+}
+
+.call > span {
+  margin-left: 10px;
+}
+
+.review {
+  max-width: 1000px;
+}
+
+footer {
+  padding: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--color-lightaccent)
+}
+
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 1000px) {
+  .about-us {
+    justify-content: center;
+  }
+  .about-us > div {
+    width: 0;
+  }
+
+  main {
+    height: auto;
+    padding: 0;
+    padding: 50px 0;
+  }
+
+  header {
+    background: none;
+  }
+
+  header ul {
+    display: none;
+  }
+
+  header svg{
+    display: block;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 60px;
+    color: var(--color-main);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dish{
+    width: 150px;
+    height: 200px;
+  }
+
+  h1 {
+    line-height: 1;
+  }
+
+  main h2 {
+    margin-bottom: 0;
+  }
+
+  h1, main > section > h2 {
+    text-shadow: 2px 2px 2px black;
+  }
+
+  h1, h2, .htag {
+    text-align: center;
+    align-self: center;
+  }
+
+  .call, .phone-number {
+    align-self: center;
+  }
+  .phone-number {
+    margin: 0;
+  }
+}
